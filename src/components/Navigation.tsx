@@ -15,18 +15,22 @@ const Navigation = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  // Removed "Contact" from the nav items
   const navItems = [
     { label: "About", href: "#about" },
     { label: "Experience", href: "#experience" },
     { label: "Projects", href: "#projects" },
     { label: "Skills", href: "#skills" },
-    { label: "Contact", href: "#contact" },
   ];
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      isScrolled ? "bg-background/95 backdrop-blur-sm shadow-lg" : "bg-transparent"
-    }`}>
+    <nav
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        isScrolled
+          ? "bg-background/95 backdrop-blur-sm shadow-lg"
+          : "bg-transparent"
+      }`}
+    >
       <div className="container mx-auto px-6">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
@@ -46,9 +50,13 @@ const Navigation = () => {
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
               </a>
             ))}
-            <Button size="sm" className="tech-glow">
-              Contact
-            </Button>
+
+            {/* Glowing Contact Button */}
+            <a href="#contact">
+              <Button size="sm" className="tech-glow">
+                Contact
+              </Button>
+            </a>
           </div>
 
           {/* Mobile Menu Button */}
@@ -74,9 +82,13 @@ const Navigation = () => {
                   {item.label}
                 </a>
               ))}
-              <Button size="sm" className="w-full tech-glow mt-4">
-                Contact
-              </Button>
+
+              {/* Contact Button (mobile) */}
+              <a href="#contact" onClick={() => setIsOpen(false)}>
+                <Button size="sm" className="w-full tech-glow mt-4">
+                  Contact
+                </Button>
+              </a>
             </div>
           </div>
         )}

@@ -21,24 +21,36 @@ const Hero = () => {
             Daeren Kim
           </h1>
           
-          <h2 className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto">
+          <h2 className="text-xl md:text-2xl text-gray-800 dark:text-gray-200 mb-8 max-w-3xl mx-auto">
             Passionate about Machine Learning, AI, and Data-Driven Solutions
           </h2>
           
           <p className="text-lg text-foreground/80 mb-10 max-w-2xl mx-auto leading-relaxed">
-            Second-year student at NUS with expertise in ML/AI, statistical analysis, and full-stack development. 
+            Second-year student at NUS with passionate in data science, machine learning, AI and statistical analysis. 
             Building intelligent systems that make a difference.
           </p>
           
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
-            <Button size="lg" className="tech-glow">
-              <Mail className="w-5 h-5 mr-2" />
-              Get In Touch
-            </Button>
-            <Button variant="outline" size="lg">
-              <Download className="w-5 h-5 mr-2" />
-              Download Resume
-            </Button>
+            {/* Contact button */}
+            <a href="mailto:daerenkim@u.nus.edu">
+              <Button size="lg" className="tech-glow">
+                <Mail className="w-5 h-5 mr-2" />
+                Get In Touch
+              </Button>
+            </a>
+
+            {/* Resume download button */}
+            <a
+              href="https://drive.google.com/file/d/1PpSK19m1T8G0glAL01XJWeHCkkVo8YAV/view?usp=sharing"
+              download
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button variant="outline" size="lg">
+                <Download className="w-5 h-5 mr-2" />
+                Download Resume
+              </Button>
+            </a>
           </div>
           
           <div className="flex items-center justify-center gap-6">

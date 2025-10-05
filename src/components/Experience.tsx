@@ -16,7 +16,7 @@ const Experience = () => {
         "Implemented full voice interface with speech-to-text input and text-to-speech output for inclusivity",
         "Built scalable RAG architecture skeleton for FAQs, troubleshooting, and advanced knowledge-driven assistants"
       ],
-      skills: ["Python", "FastAPI", "Flask", "LLMs", "RAG", "NLP", "HuggingFace", "Ollama"]
+      skills: ["Python", "FastAPI", "Flask", "LLMs", "RAG", "NLP", "HuggingFace", "Ollama", "FAISS", "PyMuPDF"]
     },
     {
       title: "Student Tutor for Data Science Course DSA1101",
@@ -30,7 +30,7 @@ const Experience = () => {
         "Break down complicated concepts for beginners in an accessible way",
         "Provide hands-on guidance and support for practical data science applications"
       ],
-      skills: ["R Programming", "Statistics", "Machine Learning", "Teaching", "Regression Analysis"]
+      skills: ["R Programming", "Statistics", "Supervised Learning", "Unsupervised Learning", "Regression Analysis"]
     },
     {
       title: "Workshop Executive",
@@ -70,7 +70,7 @@ const Experience = () => {
             Experience
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            A journey through internships, teaching, and leadership roles that shaped my expertise in ML/AI and data science.
+            A journey through internships, teaching, and leadership roles that shaped my passion in data science, machine learning and AI.
           </p>
         </div>
 

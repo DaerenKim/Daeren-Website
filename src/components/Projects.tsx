@@ -104,37 +104,59 @@ const Projects = () => {
                 <div className="flex gap-3 pt-4 border-t border-border">
                   {index === 0 ? (
                     <>
-                      <Button size="sm" className="flex items-center gap-2">
-                        <Github className="w-4 h-4" />
-                        View Code
-                      </Button>
-                      <Button variant="outline" size="sm" className="flex items-center gap-2">
-                        <ExternalLink className="w-4 h-4" />
-                        View Video Demo
-                      </Button>
-                      <Button variant="outline" size="sm" className="flex items-center gap-2">
-                        <ExternalLink className="w-4 h-4" />
-                        View Slide Deck
-                      </Button>
+                      <a
+                        href="https://github.com/DaerenKim/simplifynext_agentic_ai/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <Button size="sm" className="flex items-center gap-2">
+                          <Github className="w-4 h-4" />
+                          View Code
+                        </Button>
+                      </a>
+                      <a
+                        href="https://youtu.be/07PWWNEsrSM"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <Button variant="outline" size="sm" className="flex items-center gap-2">
+                          <ExternalLink className="w-4 h-4" />
+                          View Video Demo
+                        </Button>
+                      </a>
+                      <a
+                        href="https://github.com/DaerenKim/simplifynext_agentic_ai/blob/main/Project_UNFRAZZLE_deck.pdf"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <Button variant="outline" size="sm" className="flex items-center gap-2">
+                          <ExternalLink className="w-4 h-4" />
+                          View Slide Deck
+                        </Button>
+                      </a>
                     </>
                   ) : (
-                    <>
-                      <Button size="sm" className="flex items-center gap-2">
-                        <Github className="w-4 h-4" />
-                        View Code
-                      </Button>
-                      {project.liveUrl && (
+                    <>                      
+                      <a
+                        href="https://github.com/DaerenKim/Heart-Disease-Analysis-Statistical-Report"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <Button size="sm" className="flex items-center gap-2">
+                          <Github className="w-4 h-4" />
+                          View Code
+                        </Button>
+                      </a>
+                      <a
+                        href="https://github.com/DaerenKim/Heart-Disease-Analysis-Statistical-Report/blob/main/Daeren%20Kim%20Heart%20Disease%20Statistical%20Report.pdf"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
                         <Button variant="outline" size="sm" className="flex items-center gap-2">
                           <ExternalLink className="w-4 h-4" />
-                          Live Demo
+                          View Report
                         </Button>
-                      )}
-                      {project.reportUrl && (
-                        <Button variant="outline" size="sm" className="flex items-center gap-2">
-                          <ExternalLink className="w-4 h-4" />
-                          Report
-                        </Button>
-                      )}
+                      </a>
                     </>
                   )}
                 </div>
@@ -144,10 +166,16 @@ const Projects = () => {
         </div>
 
         <div className="text-center mt-12">
-          <Button variant="outline" size="lg" className="tech-glow">
-            <Github className="w-5 h-5 mr-2" />
-            View More on GitHub
-          </Button>
+          <a 
+            href="https://github.com/DaerenKim/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Button variant="outline" size="lg" className="tech-glow">
+              <Github className="w-5 h-5 mr-2" />
+              View More on GitHub
+            </Button>
+          </a>
         </div>
       </div>
     </section>

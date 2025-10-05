@@ -36,6 +36,8 @@ const About = () => {
               <Badge variant="secondary">Python</Badge>
               <Badge variant="secondary">R</Badge>
               <Badge variant="secondary">SQL</Badge>
+              <Badge variant="secondary">Data Analytics</Badge>
+              <Badge variant="secondary">Data Visualisation</Badge>
             </div>
           </div>
           
@@ -73,7 +75,7 @@ const About = () => {
                   <div>
                     <h3 className="text-xl font-semibold mb-2">Location</h3>
                     <p className="text-foreground">Singapore</p>
-                    <p className="text-muted-foreground">Open to remote opportunities</p>
+                    <p className="text-muted-foreground">Open to remote and onsite opportunities</p>
                   </div>
                 </div>
               </div>
