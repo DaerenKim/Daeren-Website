@@ -6,7 +6,7 @@ import { ExternalLink, Github, Calendar, Users, BarChart3 } from "lucide-react";
 const Projects = () => {
   const projects = [
     {
-      title: "Multi-Agent System for Workplace Wellness",
+      title: "Multi-Agent System for Workplace Wellness (Semi-finalist for AWS Simplifynext Agentic AI Hackathon)",
       period: "Aug 2025 - Sep 2025",
       description: "Advanced backend system for workplace wellness management using multi-agent architecture and intelligent scheduling.",
       longDescription: "Comprehensive workplace wellness platform featuring intelligent agent orchestration, burnout detection algorithms, and seamless calendar integration for optimal employee wellbeing management.",
