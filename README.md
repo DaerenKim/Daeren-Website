@@ -11,3 +11,7 @@ It serves as my online portfolio to showcase my projects, skills, and experience
 - Portfolio / Projects showcase  
 - Contact links (GitHub, LinkedIn, email, etc.)  
 - Smooth navigation and clean UI  
+
+---
+
+## Website: https://daerenkim.github.io/Daeren-Website/
