@@ -26,7 +26,7 @@ const Hero = () => {
           </h2>
           
           <p className="text-lg text-foreground/80 mb-10 max-w-2xl mx-auto leading-relaxed">
-            Second-year student at NUS with passionate in data science, machine learning, AI and statistical analysis. 
+            Second-year student at NUS passionate in data science, machine learning, AI and statistical analysis. 
             Building intelligent systems that make a difference.
           </p>
           
