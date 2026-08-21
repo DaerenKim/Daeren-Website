@@ -1,86 +1,99 @@
-import { Card, CardContent } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { GraduationCap, MapPin, Calendar } from "lucide-react";
+import { GraduationCap, MapPin, Trophy } from "lucide-react";
 
 const About = () => {
+  const highlights = [
+    { value: "4.83", label: "CGPA / 5.0" },
+    { value: "3", label: "Internships" },
+    { value: "4×", label: "Hackathon Wins" },
+    { value: "60+", label: "Students Taught" },
+  ];
+
   return (
     <section id="about" className="section-padding bg-background">
-      <div className="container mx-auto max-w-6xl">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-            About Me
+      <div className="container mx-auto max-w-4xl">
+        <div className="mb-16">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-foreground">
+            About
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Driven by curiosity and passion for data science, AI, and creating meaningful impact through technology.
-          </p>
+          <div className="w-12 h-0.5 bg-primary"></div>
         </div>
-        
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          <div className="space-y-6 animate-slide-up">
-            <p className="text-lg leading-relaxed text-foreground/90">
-              I'm currently pursuing a Major in Data Science & Analytics with a second major in Quantitative Finance 
-              and a minor in AI at the National University of Singapore. My journey combines rigorous academic 
-              foundation with hands-on experience in machine learning, statistical analysis, and software development.
-            </p>
-            
-            <p className="text-lg leading-relaxed text-foreground/90">
-              From developing RAG-based chatbots at UST Malaysia to conducting statistical analysis of heart disease 
-              risk factors, I'm passionate about leveraging data and AI to solve real-world problems. I also enjoy 
-              teaching and sharing knowledge as a student tutor for data science courses.
-            </p>
-            
-            <div className="flex flex-wrap gap-2">
-              <Badge variant="secondary">Data Science</Badge>
-              <Badge variant="secondary">Machine Learning</Badge>
-              <Badge variant="secondary">Statistical Analysis</Badge>
-              <Badge variant="secondary">Python</Badge>
-              <Badge variant="secondary">R</Badge>
-              <Badge variant="secondary">SQL</Badge>
-              <Badge variant="secondary">Data Analytics</Badge>
-              <Badge variant="secondary">Data Visualisation</Badge>
+
+        {/* Highlights */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
+          {highlights.map((item, index) => (
+            <div
+              key={index}
+              className="text-center p-6 border border-border rounded-lg animate-slide-up"
+              style={{ animationDelay: `${index * 100}ms` }}
+            >
+              <p className="text-3xl font-bold text-primary mb-1">{item.value}</p>
+              <p className="text-sm text-muted-foreground">{item.label}</p>
             </div>
+          ))}
+        </div>
+
+        <div className="grid lg:grid-cols-5 gap-12">
+          <div className="lg:col-span-3 space-y-6 animate-slide-up">
+            <p className="text-muted-foreground leading-relaxed text-lg">
+              I'm a Year 3 student at NUS studying Data Science & Analytics with
+              a second major in Computer Science and a minor in Quantitative Finance.
+            </p>
+
+            <p className="text-muted-foreground leading-relaxed">
+              At <span className="text-foreground font-medium">AIA Singapore</span>, I built production MLOps
+              pipelines and an OCR system that reduced document processing time by 98%, saving 5,000+ hours monthly.
+              At <span className="text-foreground font-medium">Shopee</span>, I developed automated analytics
+              pipelines that eliminated 100+ hours of manual work weekly.
+            </p>
+
+            <p className="text-muted-foreground leading-relaxed">
+              Won Microsoft Buildathon 2026 and placed 1st Runner Up at NUS Datathon
+              and AgentForge. I also teach machine learning to 60+ students
+              and co-host technical workshops on ML, deep learning, and data engineering.
+            </p>
           </div>
-          
-          <Card className="card-gradient tech-glow animate-slide-up">
-            <CardContent className="p-8">
-              <div className="space-y-6">
-                <div className="flex items-start gap-4">
-                  <div className="p-3 rounded-full bg-primary/20">
-                    <GraduationCap className="w-6 h-6 text-primary" />
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-semibold mb-2">Education</h3>
-                    <p className="text-foreground font-medium">National University of Singapore</p>
-                    <p className="text-muted-foreground">Major: Data Science & Analytics</p>
-                    <p className="text-muted-foreground">2nd Major: Quantitative Finance</p>
-                    <p className="text-muted-foreground">Minor: Artificial Intelligence</p>
-                  </div>
-                </div>
-                
-                <div className="flex items-start gap-4">
-                  <div className="p-3 rounded-full bg-accent/20">
-                    <Calendar className="w-6 h-6 text-accent" />
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-semibold mb-2">Current Status</h3>
-                    <p className="text-foreground">Second Year Student</p>
-                    <p className="text-muted-foreground">Aug 2024 - Present</p>
-                  </div>
-                </div>
-                
-                <div className="flex items-start gap-4">
-                  <div className="p-3 rounded-full bg-tech-cyan/20">
-                    <MapPin className="w-6 h-6 text-tech-cyan" />
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-semibold mb-2">Location</h3>
-                    <p className="text-foreground">Singapore</p>
-                    <p className="text-muted-foreground">Open to remote and onsite opportunities</p>
-                  </div>
+
+          <div className="lg:col-span-2 animate-slide-up">
+            <div className="p-6 border border-border rounded-lg space-y-6">
+              <div className="flex items-start gap-4">
+                <GraduationCap className="w-5 h-5 text-primary mt-0.5" />
+                <div>
+                  <p className="font-medium text-foreground">
+                    National University of Singapore
+                  </p>
+                  <p className="text-sm text-muted-foreground">
+                    Data Science & Analytics
+                  </p>
+                  <p className="text-sm text-muted-foreground">
+                    Computer Science (2nd Major)
+                  </p>
+                  <p className="text-sm text-muted-foreground">
+                    Quantitative Finance (Minor)
+                  </p>
                 </div>
               </div>
-            </CardContent>
-          </Card>
+
+              <div className="flex items-start gap-4">
+                <Trophy className="w-5 h-5 text-primary mt-0.5" />
+                <div>
+                  <p className="font-medium text-foreground">CGPA 4.83/5.0</p>
+                  <p className="text-sm text-muted-foreground">
+                    Year 3 · Expected May 2028
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-4">
+                <MapPin className="w-5 h-5 text-primary mt-0.5" />
+                <div>
+                  <p className="font-medium text-foreground">Singapore</p>
+                  <p className="text-sm text-muted-foreground">
+                    Open to opportunities
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>

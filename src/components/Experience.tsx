@@ -1,122 +1,124 @@
-import { Card, CardContent } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { Building2, Users, GraduationCap, Calendar } from "lucide-react";
-
 const Experience = () => {
-  const experiences = [
+  const workExperience = [
     {
-      title: "Project Intern (ML/AI)",
-      company: "UST Malaysia",
-      period: "May 2025 - Jul 2025",
-      type: "Internship",
-      icon: Building2,
-      description: [
-        "Engineered a RAG-based chatbot prototype with FastAPI/Flask backend, integrating Ollama & HuggingFace LLMs",
-        "Designed dual-functionality modules with tutor and mental health chatbot with NLP-based depression detection",
-        "Implemented full voice interface with speech-to-text input and text-to-speech output for inclusivity",
-        "Built scalable RAG architecture skeleton for FAQs, troubleshooting, and advanced knowledge-driven assistants"
+      title: "AI Engineer Intern",
+      company: "AIA Singapore",
+      period: "May 2026 – Jul 2026",
+      highlights: [
+        "Built CI/CD pipelines for ML systems, reducing deployment time by 40%",
+        "Deployed production MLOps pipeline (experiment tracking, model registry, monitoring) with 95%+ OCR accuracy",
+        "Developed OCR document processing with signature verification—reduced processing from 30 min → 30 sec, saving 5,000+ hrs/month",
       ],
-      skills: ["Python", "FastAPI", "Flask", "LLMs", "RAG", "NLP", "HuggingFace", "Ollama", "FAISS", "PyMuPDF"]
     },
     {
-      title: "Student Tutor for Data Science Course DSA1101",
-      company: "National University of Singapore",
-      period: "Jan 2025 - Present",
-      type: "Teaching",
-      icon: GraduationCap,
-      description: [
-        "Conduct weekly tutorials on R programming, statistics, regression methods, and machine learning",
-        "Teach both supervised & unsupervised learning concepts to over 60 students",
-        "Break down complicated concepts for beginners in an accessible way",
-        "Provide hands-on guidance and support for practical data science applications"
+      title: "Data Analyst Intern",
+      company: "Shopee Singapore",
+      period: "Jan 2026 – May 2026",
+      highlights: [
+        "Built automated transcript sampling pipeline, eliminating 100+ hours of manual work weekly",
+        "Developed SQL pipelines and dashboards—increased CSAT by 1.2% and deflection by 1.4%",
+        "Conducted funnel analysis to identify drop-off points, improving form completion rates by 3–4%",
       ],
-      skills: ["R Programming", "Statistics", "Supervised Learning", "Unsupervised Learning", "Regression Analysis"]
+    },
+    {
+      title: "ML Engineer Intern",
+      company: "UST Malaysia",
+      period: "May 2025 – Aug 2025",
+      highlights: [
+        "Built LLM-powered IT troubleshooting system with RAG, reducing escalations by 12%",
+        "Designed semantic search over 10K+ documents using dense embeddings and ANN indexing",
+        "Containerised services with Docker and deployed APIs with monitoring, reducing error rate by 20%+",
+      ],
+    },
+  ];
+
+  const leadership = [
+    {
+      title: "Student Tutor – DSA1101",
+      org: "National University of Singapore",
+      period: "Jan 2025 – Dec 2025",
+      description: "Teaching ML to 60+ students · 4.7/5.0 rating · 30+ award nominations",
     },
     {
       title: "Workshop Executive",
-      company: "NUS Statistics & Data Science Society",
-      period: "Aug 2025 - Present",
-      type: "CCA",
-      icon: Users,
-      description: [
-        "Organize and host workshops on Data Science topics, including machine learning",
-        "Design and deliver engaging learning sessions for technical skill enhancement",
-        "Simplify complex concepts and foster practical understanding among attendees",
-        "Lead initiatives to build the data science community within the university"
-      ],
-      skills: ["Workshop Design", "Public Speaking", "Community Building", "Data Science Education"]
+      org: "NUS Statistics & Data Science Society",
+      period: "Aug 2025 – Apr 2026",
+      description: "Co-hosted workshops: Machine Learning, Deep Learning, Data Engineering, Product Analytics",
     },
     {
-      title: "Project Executive",
-      company: "NUS Student Union",
-      period: "May 2025 - Present",
-      type: "CCA",
-      icon: Users,
-      description: [
-        "Plan and coordinate large-scale cultural events with performances and interactive booths",
-        "Manage cross-functional responsibilities and ensure smooth program flow",
-        "Liaise with over 10 cultural CCAs and coordinate performers, sponsors, and logistics",
-        "Oversee audience engagement activities and prize giveaway coordination"
-      ],
-      skills: ["Event Management", "Cross-functional Coordination", "Stakeholder Management", "Leadership"]
-    }
+      title: "ISR Project Executive",
+      org: "NUS Students' Union",
+      period: "May 2025 – Apr 2026",
+      description: "Co-organized Global Cultural Fair 2026 with 6-member team, reaching 1,000+ attendees",
+    },
+    {
+      title: "ISR Welfare Executive",
+      org: "NUS Students' Union",
+      period: "Sep 2024 – May 2025",
+      description: "Designed welfare initiatives for international students; coordinated exam welfare pack giveaway",
+    },
   ];
 
   return (
-    <section id="experience" className="section-padding bg-muted/30">
-      <div className="container mx-auto max-w-6xl">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+    <section id="experience" className="section-padding bg-card">
+      <div className="container mx-auto max-w-4xl">
+        <div className="mb-16">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-foreground">
             Experience
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            A journey through internships, teaching, and leadership roles that shaped my passion in data science, machine learning and AI.
-          </p>
+          <div className="w-12 h-0.5 bg-primary"></div>
         </div>
 
-        <div className="space-y-8">
-          {experiences.map((exp, index) => (
-            <Card key={index} className="card-gradient tech-glow animate-slide-up hover:shadow-xl transition-all duration-300">
-              <CardContent className="p-8">
-                <div className="grid lg:grid-cols-3 gap-6">
-                  <div className="lg:col-span-1">
-                    <div className="flex items-start gap-4 mb-4">
-                      <div className="p-3 rounded-full bg-primary/20">
-                        <exp.icon className="w-6 h-6 text-primary" />
-                      </div>
-                      <div>
-                        <Badge variant="outline" className="mb-2">{exp.type}</Badge>
-                        <h3 className="text-xl font-bold mb-1">{exp.title}</h3>
-                        <p className="text-accent font-semibold">{exp.company}</p>
-                        <div className="flex items-center gap-2 mt-2 text-muted-foreground">
-                          <Calendar className="w-4 h-4" />
-                          <span className="text-sm">{exp.period}</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  
-                  <div className="lg:col-span-2">
-                    <ul className="space-y-3 mb-6">
-                      {exp.description.map((item, i) => (
-                        <li key={i} className="flex items-start gap-3">
-                          <div className="w-2 h-2 rounded-full bg-primary mt-2 flex-shrink-0"></div>
-                          <span className="text-foreground/90">{item}</span>
-                        </li>
-                      ))}
-                    </ul>
-                    
-                    <div className="flex flex-wrap gap-2">
-                      {exp.skills.map((skill, i) => (
-                        <Badge key={i} variant="secondary" className="text-xs">
-                          {skill}
-                        </Badge>
-                      ))}
-                    </div>
-                  </div>
+        {/* Work Experience */}
+        <div className="space-y-12 mb-20">
+          {workExperience.map((exp, index) => (
+            <div
+              key={index}
+              className="animate-slide-up"
+              style={{ animationDelay: `${index * 100}ms` }}
+            >
+              <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-1 mb-4">
+                <div>
+                  <h3 className="text-lg font-semibold text-foreground">
+                    {exp.title}
+                  </h3>
+                  <p className="text-primary">{exp.company}</p>
                 </div>
-              </CardContent>
-            </Card>
+                <p className="text-sm text-muted-foreground">{exp.period}</p>
+              </div>
+              <ul className="space-y-2">
+                {exp.highlights.map((item, i) => (
+                  <li
+                    key={i}
+                    className="text-muted-foreground text-sm leading-relaxed pl-4 border-l-2 border-border"
+                  >
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+
+        {/* Leadership & Teaching */}
+        <div className="mb-8">
+          <h3 className="text-xl font-semibold text-foreground mb-8">
+            Leadership & Teaching
+          </h3>
+        </div>
+
+        <div className="grid md:grid-cols-2 gap-6">
+          {leadership.map((item, index) => (
+            <div
+              key={index}
+              className="p-5 border border-border rounded-lg animate-slide-up"
+              style={{ animationDelay: `${index * 100}ms` }}
+            >
+              <h4 className="font-medium text-foreground">{item.title}</h4>
+              <p className="text-sm text-primary mb-2">{item.org}</p>
+              <p className="text-xs text-muted-foreground mb-2">{item.period}</p>
+              <p className="text-sm text-muted-foreground">{item.description}</p>
+            </div>
           ))}
         </div>
       </div>
