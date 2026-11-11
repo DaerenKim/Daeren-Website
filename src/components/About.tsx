@@ -67,8 +67,8 @@ const About = () => {
 
             <Reveal delay={180}>
               <p className="text-muted-foreground leading-relaxed text-lg">
-                Won Microsoft Buildathon 2026 and placed 1st Runner Up at NUS Datathon and
-                AgentForge. I also teach machine learning to 200+ students and co-host technical
+                Won Microsoft Buildathon 2026 and took 1st place at the SDS x DSESC Datathon
+                2026, plus 1st Runner Up at NUS Datathon and AgentForge. I also teach machine learning to 200+ students and co-host technical
                 workshops on ML, deep learning, and data engineering.
               </p>
             </Reveal>
