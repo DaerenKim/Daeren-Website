@@ -39,8 +39,8 @@ const leadership = [
   {
     title: "Student Tutor – DSA1101",
     org: "National University of Singapore",
-    period: "Jan 2025 – Dec 2025",
-    description: "Teaching ML to 200+ students · 4.7/5.0 rating · 30+ award nominations",
+    period: "Jan 2025 – Present",
+    description: "Tutored 200+ students in ML · 4.7/5.0 rating · 30+ award nominations",
   },
   {
     title: "Workshop Executive",
