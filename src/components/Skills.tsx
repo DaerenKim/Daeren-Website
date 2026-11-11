@@ -13,7 +13,7 @@ const skillCategories = [
 
 const achievements = [
   { icon: Trophy, title: "Microsoft Buildathon 2026", detail: "Champion" },
-  { icon: Medal, title: "NUS Hackathons", detail: "1st Runner Up × 2" },
+  { icon: Medal, title: "NUS Hackathons", detail: "1st Place · Runner Up × 2" },
   { icon: Award, title: "WorldQuant Brain", detail: "Gold · 15+ signals" },
 ];
 
