@@ -1,98 +1,99 @@
 import { GraduationCap, MapPin, Trophy } from "lucide-react";
+import { CountUp, Reveal, SectionHead } from "@/components/motion";
+
+const highlights = [
+  { value: "4.83", label: "CGPA / 5.0" },
+  { value: "3", label: "Internships" },
+  { value: "5×", label: "Hackathon Wins" },
+  { value: "200+", label: "Students Taught" },
+];
+
+const facts = [
+  {
+    icon: GraduationCap,
+    title: "National University of Singapore",
+    lines: [
+      "Data Science & Analytics",
+      "Computer Science (2nd Major)",
+      "Quantitative Finance (Minor)",
+    ],
+  },
+  { icon: Trophy, title: "CGPA 4.83/5.0", lines: ["Year 3 · Expected May 2028"] },
+  { icon: MapPin, title: "Singapore", lines: ["Open to opportunities"] },
+];
 
 const About = () => {
-  const highlights = [
-    { value: "4.83", label: "CGPA / 5.0" },
-    { value: "3", label: "Internships" },
-    { value: "4×", label: "Hackathon Wins" },
-    { value: "60+", label: "Students Taught" },
-  ];
-
   return (
-    <section id="about" className="section-padding bg-background">
-      <div className="container mx-auto max-w-4xl">
-        <div className="mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-foreground">
-            About
-          </h2>
-          <div className="w-12 h-0.5 bg-primary"></div>
-        </div>
+    <section id="about" className="section">
+      <div className="shell">
+        <SectionHead index="01" title="About" />
 
-        {/* Highlights */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
+        <div className="grid grid-cols-2 lg:grid-cols-4 border-t border-l mb-20">
           {highlights.map((item, index) => (
-            <div
-              key={index}
-              className="text-center p-6 border border-border rounded-lg animate-slide-up"
-              style={{ animationDelay: `${index * 100}ms` }}
+            <Reveal
+              key={item.label}
+              delay={index * 90}
+              className="group border-r border-b p-6 md:p-8 transition-colors duration-500 hover:bg-card"
             >
-              <p className="text-3xl font-bold text-primary mb-1">{item.value}</p>
-              <p className="text-sm text-muted-foreground">{item.label}</p>
-            </div>
+              <CountUp
+                value={item.value}
+                className="font-display block text-5xl md:text-7xl tabular-nums transition-colors duration-300 group-hover:text-primary"
+              />
+              <p className="mt-3 font-mono text-xs uppercase tracking-[0.15em] text-muted-foreground">
+                {item.label}
+              </p>
+            </Reveal>
           ))}
         </div>
 
-        <div className="grid lg:grid-cols-5 gap-12">
-          <div className="lg:col-span-3 space-y-6 animate-slide-up">
-            <p className="text-muted-foreground leading-relaxed text-lg">
-              I'm a Year 3 student at NUS studying Data Science & Analytics with
-              a second major in Computer Science and a minor in Quantitative Finance.
-            </p>
+        <div className="grid lg:grid-cols-12 gap-12 lg:gap-16">
+          <div className="lg:col-span-7 space-y-6">
+            <Reveal>
+              <p className="text-2xl md:text-3xl font-medium tracking-tight leading-snug">
+                I'm a Year 3 student at NUS studying Data Science &amp; Analytics with a second
+                major in Computer Science and a minor in Quantitative Finance.
+              </p>
+            </Reveal>
 
-            <p className="text-muted-foreground leading-relaxed">
-              At <span className="text-foreground font-medium">AIA Singapore</span>, I built production MLOps
-              pipelines and an OCR system that reduced document processing time by 98%, saving 5,000+ hours monthly.
-              At <span className="text-foreground font-medium">Shopee</span>, I developed automated analytics
-              pipelines that eliminated 100+ hours of manual work weekly.
-            </p>
+            <Reveal delay={100}>
+              <p className="text-muted-foreground leading-relaxed text-lg">
+                At <span className="text-foreground font-medium">AIA Singapore</span>, I built
+                production MLOps pipelines and an OCR system that reduced document processing time
+                by 98%, saving 5,000+ hours monthly. At{" "}
+                <span className="text-foreground font-medium">Shopee</span>, I developed automated
+                analytics pipelines that eliminated 100+ hours of manual work weekly.
+              </p>
+            </Reveal>
 
-            <p className="text-muted-foreground leading-relaxed">
-              Won Microsoft Buildathon 2026 and placed 1st Runner Up at NUS Datathon
-              and AgentForge. I also teach machine learning to 60+ students
-              and co-host technical workshops on ML, deep learning, and data engineering.
-            </p>
+            <Reveal delay={180}>
+              <p className="text-muted-foreground leading-relaxed text-lg">
+                Won Microsoft Buildathon 2026 and placed 1st Runner Up at NUS Datathon and
+                AgentForge. I also teach machine learning to 60+ students and co-host technical
+                workshops on ML, deep learning, and data engineering.
+              </p>
+            </Reveal>
           </div>
 
-          <div className="lg:col-span-2 animate-slide-up">
-            <div className="p-6 border border-border rounded-lg space-y-6">
-              <div className="flex items-start gap-4">
-                <GraduationCap className="w-5 h-5 text-primary mt-0.5" />
+          <div className="lg:col-span-5 space-y-3">
+            {facts.map((f, i) => (
+              <Reveal
+                key={f.title}
+                delay={i * 100}
+                className="group flex items-start gap-5 rounded-2xl border bg-card p-6 transition-all duration-500 hover:-translate-y-1 hover:border-foreground/30"
+              >
+                <span className="grid h-11 w-11 shrink-0 place-items-center rounded-full border transition-colors duration-300 group-hover:bg-foreground group-hover:text-background">
+                  <f.icon className="h-5 w-5" />
+                </span>
                 <div>
-                  <p className="font-medium text-foreground">
-                    National University of Singapore
-                  </p>
-                  <p className="text-sm text-muted-foreground">
-                    Data Science & Analytics
-                  </p>
-                  <p className="text-sm text-muted-foreground">
-                    Computer Science (2nd Major)
-                  </p>
-                  <p className="text-sm text-muted-foreground">
-                    Quantitative Finance (Minor)
-                  </p>
+                  <p className="font-semibold">{f.title}</p>
+                  {f.lines.map((l) => (
+                    <p key={l} className="text-sm text-muted-foreground">
+                      {l}
+                    </p>
+                  ))}
                 </div>
-              </div>
-
-              <div className="flex items-start gap-4">
-                <Trophy className="w-5 h-5 text-primary mt-0.5" />
-                <div>
-                  <p className="font-medium text-foreground">CGPA 4.83/5.0</p>
-                  <p className="text-sm text-muted-foreground">
-                    Year 3 · Expected May 2028
-                  </p>
-                </div>
-              </div>
-
-              <div className="flex items-start gap-4">
-                <MapPin className="w-5 h-5 text-primary mt-0.5" />
-                <div>
-                  <p className="font-medium text-foreground">Singapore</p>
-                  <p className="text-sm text-muted-foreground">
-                    Open to opportunities
-                  </p>
-                </div>
-              </div>
-            </div>
+              </Reveal>
+            ))}
           </div>
         </div>
       </div>
